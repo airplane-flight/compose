@@ -1,0 +1,11 @@
+services:
+  flame:
+    image: pawelmalak/flame:latest
+    container_name: flame
+    restart: unless-stopped
+    environment:
+      - PASSWORD=${PASS}
+    ports:
+      - 5005:5005
+    volumes:
+      - /home/amccue/.config/docker/flame:/app/data
